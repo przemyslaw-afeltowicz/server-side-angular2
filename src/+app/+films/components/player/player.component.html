@@ -1,0 +1,37 @@
+<!--<div class="html5-player">-->
+  <!--<div class="player-video">-->
+    <!--<video src="{{src}}" (click)="setPlay(video, button)" (timeupdate)="progress(video, range)"></video>-->
+  <!--</div>-->
+  <!--<div class="player-control-bg">-->
+    <!--<input type="range" value="0" min="0" max="100" (change)="setTime(video, range)">-->
+    <!--<div class="player-controls">-->
+      <!--<button #button (click)="setPlay(video, button)">Play</button>-->
+      <!--<button #fullscreen (click)="setFullScreen(video)">fullscreen</button>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+<div class="player-html5">
+  <div class="player-video">
+    <video #video class="video" poster="{{poster}}" (click)="setPlay(video, play)" (timeupdate)="timeupdate(video, range, progress)" src="{{src}}"></video>
+  </div>
+  <div class="player-control-bg">
+    <div class="row">
+      <div class="col-1">
+        <i #play class="fa fa-play" (click)="setPlay(video, play)" aria-hidden="true"></i>
+      </div>
+      <div class="col-9">
+        <div #playerprogress class="player-progress" (click)="setTime($event, video, range, playerprogress)">
+          <div class="time-info">0:15</div>
+          <div class="range" #range></div>
+          <div class="progress" #progress></div>
+          <div class="buffer" #buffer></div>
+        </div>
+      </div>
+      <div class="col-2">
+        <i class="fa fa-volume-up" aria-hidden="true"></i>
+        <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+</div>

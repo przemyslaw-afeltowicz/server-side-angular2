@@ -1,0 +1,11 @@
+<div class="container films">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let film of films">
+      <a routerLink="/film/{{film.id}}">
+        <img src="{{film.thumb}}" alt="{{film.thumb}}"  style=" width: 100%; display: block;">
+        <h2 class="card-text">{{film.title}}</h2>
+        <p class="card-text">{{film.description}}</p>
+      </a>
+    </div>
+  </div>
+</div>

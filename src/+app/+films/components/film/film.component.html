@@ -1,0 +1,13 @@
+<div class="container films">
+  <div class="row">
+    <div class="col-md-8">
+      <app-player [src]="film.source" [poster]="film.thumb"></app-player>
+    </div>
+    <div class="col-md-4">
+      <h1>{{film.title}}</h1>
+      <p>Opis: {{film.description}}</p>
+      <p>Kategoria: {{film.category}}</p>
+      <p>Reżyser: {{film.director}}</p>
+    </div>
+  </div>
+</div>
